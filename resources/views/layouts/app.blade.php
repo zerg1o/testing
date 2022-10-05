@@ -60,7 +60,7 @@
                                 <a class="nav-link" href="{{ route('like.index') }}">Favoritas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('image.create') }}">Subir imagen</a>
+                                <a class="nav-link" href="{{ route('post.create') }}">Subir imagen</a>
                             </li>
                             <li class="nav-item">
 

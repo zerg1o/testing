@@ -12,8 +12,8 @@ class Like extends Model
         return $this->belongsTo('App\User','user_id');
     }
 
-    //relacion muchos a uno (belongsTo) 
-    public function image(){
-        return $this->belongsTo('App\Image','image_id');
+    //relacion muchos a uno (belongsTo)
+    public function post(){
+        return $this->belongsTo('App\Post','post_id');
     }
 }

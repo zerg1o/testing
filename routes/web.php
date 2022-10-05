@@ -56,6 +56,9 @@ Route::get('/image/delete/{id}','ImageController@delete')->name('image.delete');
 Route::get('/image/edit/{id}','ImageController@edit')->name('image.edit');
 Route::post('/image/update','ImageController@update')->name('image.update');
 
+//POST
+Route::get('/post/create', 'PostController@create')->name('post.create');
+Route::post('/post/save','PostController@save')->name('post.save');
 //COMMENT
 Route::post('comment/save','CommentController@save')->name('comment.save');
 Route::get('comment/delete/{id}','CommentController@delete')->name('comment.delete');

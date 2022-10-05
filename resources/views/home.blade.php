@@ -6,13 +6,13 @@
             <div class="col-md-6">
                 @include('includes.message')
 
-                @foreach ($images as $image)
-                    @include('includes.image',['image'=>$image])
+                @foreach ($posts as $post)
+                    @include('includes.carrusel',['post'=>$post])
                 @endforeach
 
                 {{-- Paginacion --}}
                 <div class="clearfix"></div>
-                {{ $images->links() }}
+                {{ $posts->links() }}
             </div>
         </div>
     </div>

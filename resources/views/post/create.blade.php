@@ -7,12 +7,12 @@
                 <div class="card">
                     <div class="card-header">Crear Nuevo Post</div>
                     <div class="card-body">
-                        <form action="{{ route('image.save') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('post.save') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group row">
-                                <label for="image_path" class="col-md-4 col-form-label text-md-right">Imagen</label>
+                                <label for="image_path" class="col-md-4 col-form-label text-md-right">Agregar Foto/Video</label>
                                 <div class="col-md-5">
-                                    <input id="image_path" type="file" class="form-control{{ $errors->has('image_path') ? ' is-invalid' : '' }}" name="image_path" required>
+                                    <input id="image_path" type="file" class="form-control{{ $errors->has('image_path') ? ' is-invalid' : '' }}" name="image_path[]" required multiple>
 
                                     @if ($errors->has('image_path'))
                                     <span class="invalid-feedback" role="alert">

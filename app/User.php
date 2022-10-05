@@ -27,7 +27,17 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function images(){
-        return $this->hasMany('App\Image')->orderBy('id','desc');
+    public function posts(){
+        return $this->hasMany('App\Post')->orderBy('id','desc');
     }
+
+    public function likes(){
+        return $this->hasMany('App\Like');
+    }
+
+    public function comments(){
+        return $this->hasMany('App\Comment');
+    }
+
+
 }
