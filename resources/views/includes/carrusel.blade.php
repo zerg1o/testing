@@ -19,9 +19,9 @@
 
     <div class="card-body">
         <div class="image-container">
-            <a href="{{ route('image.detail', ['id' => $post->id]) }}">
+            <a href="{{ route('post.detail', ['id' => $post->id]) }}">
 
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleIndicators{{$post->id}}" class="carousel slide" data-ride="carousel">
                     {{-- <ol class="carousel-indicators">
                         @for ($i = 0; $i < count($post->images); $i++)
                             <li data-target="#carouselExampleIndicators" data-slide-to="{{ $i }}"
@@ -41,11 +41,11 @@
                         @endforeach
                     </div>
 
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators{{$post->id}}" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <a class="carousel-control-next" href="#carouselExampleIndicators{{$post->id}}" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>

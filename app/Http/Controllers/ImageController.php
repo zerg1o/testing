@@ -64,11 +64,11 @@ class ImageController extends Controller
     public function delete($id){
         $user = \Auth::user();
         $image = Image::find($id);
-        $comments = Comment::where('image_id',$id)->get();
-        $likes = Like::where('image_id',$id)->get();
+        /* $comments = Comment::where('image_id',$id)->get(); */
+        /* $likes = Like::where('image_id',$id)->get(); */
 
-        if($image && $user && $image->user->id == $user->id){
-            //eliminar comentarios
+        if($image && $user && $image->post->user->id == $user->id){
+            /* //eliminar comentarios
             if($comments && count($comments)>=1){
                 foreach($comments as $comment){
                     $comment->delete();
@@ -80,7 +80,7 @@ class ImageController extends Controller
                 foreach($likes as $like){
                     $like->delete();
                 }
-            }
+            } */
             //eliminar imagen del storage
             Storage::disk('images')->delete($image->image_path);
             //eliminar image
@@ -92,7 +92,7 @@ class ImageController extends Controller
             $message = array('message'=>'Error al borrar imagen');
         }
 
-        return redirect()->route('home')->with($message);
+        return redirect()->back()->with($message);
     }
 
     public function edit($id){

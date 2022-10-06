@@ -128,3 +128,31 @@ form .avatar{
     color: gray;
     font-size: 11px;
 }
+
+.image-container-edit .img-post-edit{
+    position: relative;
+    width: 25%;
+    overflow: hidden;
+
+}
+
+.image-container-edit .img-post-edit img{
+    width: 100%;
+    height: 100%;
+}
+
+.image-container-edit{
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+.btn-delete-img{
+
+
+    position: absolute;
+    left: 75%;
+}
